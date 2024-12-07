@@ -11,7 +11,7 @@ import java.util.List;
 public class CrewController {
     private String backendCrewFileName = "src/main/resources/backend-crew.md";
     private String frontendCrewFileName = "src/main/resources/frontend-crew.md";
-    public void readCrews() throws IOException {
+    public Crews readCrews() throws IOException {
         Crews crews = new Crews();
 
         List<String> crewsName = InputView.readFile(backendCrewFileName);
@@ -23,5 +23,6 @@ public class CrewController {
         for (int i = 0; i < crewsName.size(); i++) {
             crews.addCrew(new Crew(Course.FRONTEND, crewsName.get(i)));
         }
+        return crews;
     }
 }
