@@ -16,12 +16,12 @@ public class CrewController {
 
         List<String> crewsName = InputView.readFile(backendCrewFileName);
         for (int i = 0; i < crewsName.size(); i++) {
-            crews.addCrew(new Crew(Course.BACKEND, crewsName.get(i)));
+            crews.addBackendCrew(new Crew(Course.BACKEND, crewsName.get(i)));
         }
 
         crewsName = InputView.readFile(frontendCrewFileName);
         for (int i = 0; i < crewsName.size(); i++) {
-            crews.addCrew(new Crew(Course.FRONTEND, crewsName.get(i)));
+            crews.addFrontendCrew(new Crew(Course.FRONTEND, crewsName.get(i)));
         }
         return crews;
     }

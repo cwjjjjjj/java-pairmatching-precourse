@@ -22,6 +22,10 @@ public class InputView{
         return input();
     }
 
+    public static String selectRematching() {
+        return input();
+    }
+
     private static String input() {
         return Console.readLine();
     }
