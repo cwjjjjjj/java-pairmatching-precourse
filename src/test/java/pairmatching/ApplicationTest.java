@@ -5,6 +5,8 @@ import static camp.nextstep.edu.missionutils.test.Assertions.assertSimpleTest;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import camp.nextstep.edu.missionutils.test.NsTest;
+
+import java.io.IOException;
 import java.util.Arrays;
 import org.junit.jupiter.api.Test;
 import pairmatching.Application;
@@ -35,7 +37,11 @@ class ApplicationTest extends NsTest {
     }
 
     @Override
-    public void runMain() {
-        Application.main(new String[]{});
+    public void runMain()  {
+        try {
+            Application.main(new String[]{});
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
