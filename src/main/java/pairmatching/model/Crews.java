@@ -15,6 +15,14 @@ public class Crews {
         frontendCrews.add(crew);
     }
 
+    public int getBackendCrewsSize() {
+        return backendCrews.size();
+    }
+
+    public int getFrontendCrewsSize() {
+        return frontendCrews.size();
+    }
+
     public List<String> getBackendCrewsName() {
         List<String> backendCrewsName = new ArrayList<>();
         for (int i = 0; i < backendCrews.size(); i++) {
